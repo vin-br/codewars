@@ -1,10 +1,14 @@
-# Description:
+"""
+Description
 
-# You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+You will be given an array a and a value x. 
+All you need to do is check whether the provided array contains the value.
 
-# Array can contain numbers or strings. X can be either.
+Array can contain numbers or strings. X can be either.
 
-# Return true if the array contains the value, false if not.
+Return true if the array contains the value, false if not.
+"""
 
+# Solution
 def check(array, something):
     return True if something in array else False
