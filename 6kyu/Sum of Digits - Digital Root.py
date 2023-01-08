@@ -16,11 +16,7 @@ Examples
 
 # Solution 1
 def digital_root(number):
-    return (
-        number
-        if number < 10
-        else digital_root(sum([int(digit) for digit in str(number)]))
-    )
+    return number if number < 10 else digital_root(sum([int(digit) for digit in str(number)]))
 
 
 # Solution 2

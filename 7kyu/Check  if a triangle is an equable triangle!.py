@@ -17,9 +17,6 @@ def equable_triangle(a, b, c):
     perimeter = a + b + c
     half_perimeter = perimeter / 2
     area = math.sqrt(
-        half_perimeter
-        * (half_perimeter - a)
-        * (half_perimeter - b)
-        * (half_perimeter - c)
+        half_perimeter * (half_perimeter - a) * (half_perimeter - b) * (half_perimeter - c)
     )
     return area == perimeter
