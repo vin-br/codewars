@@ -21,13 +21,7 @@ Example: (input --> output)
 
 # Solution 1
 def DNA_strand(dna):
-    return (
-        dna.replace("A", "t")
-        .replace("T", "A")
-        .replace("C", "g")
-        .replace("G", "C")
-        .upper()
-    )
+    return dna.replace("A", "t").replace("T", "A").replace("C", "g").replace("G", "C").upper()
 
 
 # Solution 2
