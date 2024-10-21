@@ -1,29 +1,14 @@
-"""Description:
-
-Write a function that takes a string of parentheses, and determines
-if the order of the parentheses is valid. 
-The function should return true if the string is valid, and false if it's invalid.
-
-Examples
-
-"()"              =>  true
-")(()))"          =>  false
-"("               =>  false
-"(())((()())())"  =>  true
-
-Constraints
-
-0 <= input.length <= 100
-
-Along with opening (() and closing ()) parenthesis, 
-input may contain any valid ASCII characters. 
-Furthermore, the input string may be empty and/or not contain any parentheses at all.
-Do not treat other forms of brackets as parentheses (e.g. [], {}, <>).
-"""
-
 # Solution
-def valid_parentheses(s):
+def valid_parentheses(s: str) -> True:
+    """
+    Determines if the order of parentheses in the input string is valid.
+    Returns True if valid, otherwise False.
 
+    Constraints:
+    - Length of input string is between 0 and 100.
+    - Input may include any ASCII characters and can be empty.
+    - Only () are considered as parentheses.
+    """
     # Removing all characters between parentheses in the string
     s = "".join(c for c in s if c in "()")
 

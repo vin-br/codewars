@@ -1,24 +1,12 @@
-"""Description:
-
-The rgb function is incomplete. 
-Complete it so that passing in RGB decimal values will result in 
-a hexadecimal representation being returned. 
-Valid decimal values for RGB are 0 - 255. 
-Any values that fall out of that range must be rounded to the closest valid value.
-
-Note: 
-Your answer should always be 6 characters long, the shorthand with 3 will not work here.
-
-The following are examples of expected output values:
-
-rgb(255, 255, 255) # returns FFFFFF
-rgb(255, 255, 300) # returns FFFFFF
-rgb(0,0,0) # returns 000000
-rgb(148, 0, 211) # returns 9400D3
-"""
-
 # Solution 1
-def rgb(r, g, b):
+def rgb_1(r: int, g: int, b: int) -> str:
+    """
+    Convert RGB decimal values to a hexadecimal representation.
+
+    Each value must be in the range 0-255, rounding invalid values
+    to the nearest valid number. The result should be a 6-character
+    hexadecimal string.
+    """
     hex_r, hex_g, hex_b = "", "", ""
     # fmt: off
     hex_conversion = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
@@ -51,7 +39,14 @@ def rgb(r, g, b):
 
 
 # Solution 2
-def rgb(r, g, b):
+def rgb_2(r: int, g: int, b: int) -> str:
+    """
+    Convert RGB decimal values to a hexadecimal representation.
+
+    Each value must be in the range 0-255, rounding invalid values
+    to the nearest valid number. The result should be a 6-character
+    hexadecimal string.
+    """
     rgb_list, hex = [r, g, b], ""
     # fmt: off
     hex_conversion = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
@@ -71,10 +66,24 @@ def rgb(r, g, b):
 
 
 # Solution 3
-def rgb(*args):
+def rgb_3(*args):
+    """
+    Convert RGB decimal values to a hexadecimal representation.
+
+    Each value must be in the range 0-255, rounding invalid values
+    to the nearest valid number. The result should be a 6-character
+    hexadecimal string.
+    """
     return "".join(map(lambda x: "{:02X}".format(min(max(0, x), 255)), args))
 
 
 # Solution 4
-def rgb(r, g, b):
+def rgb_4(r: int, g: int, b: int) -> str:
+    """
+    Convert RGB decimal values to a hexadecimal representation.
+
+    Each value must be in the range 0-255, rounding invalid values
+    to the nearest valid number. The result should be a 6-character
+    hexadecimal string.
+    """
     return "".join(["%02X" % max(0, min(x, 255)) for x in [r, g, b]])

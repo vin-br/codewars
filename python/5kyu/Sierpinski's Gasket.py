@@ -1,43 +1,27 @@
-"""
-Description
-
-Write a function that takes an integer n and 
-returns the nth iteration of the fractal known as Sierpinski's Gasket.
-
-Here are the first few iterations. 
-The fractal is composed entirely of L and white-space characters; 
-each character has one space between it and the next (or a newline).
-
-0
-
-L
-
-1
-
-L
-L L
-
-2
-
-L
-L L
-L   L
-L L L L
-
-3
-
-L
-L L
-L   L
-L L L L
-L       L
-L L     L L
-L   L   L   L
-L L L L L L L L
-"""
-
-
+# Solution
 def sierpinski(n):
+    """Generates the nth iteration of Sierpinski's Gasket fractal.
+
+    The fractal consists of 'L' and whitespace characters. Each
+    character is separated by a space. The first few iterations
+    are as follows:
+
+    Iteration 0:   L
+    Iteration 1:   L
+                   L L
+    Iteration 2:   L
+                   L L
+                   L   L
+                   L L L L
+    Iteration 3:   L
+                   L L
+                   L   L
+                   L L L L
+                   L       L
+                   L L     L L
+                   L   L   L   L
+                   L L L L L L L L
+    """
     res = "L\n"
     l = [1]
     n = 2**n - 1

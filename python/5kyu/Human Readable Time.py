@@ -1,29 +1,30 @@
-"""
-Description
-
-Write a function, which takes a non-negative integer (seconds) 
-as input and returns the time in a human-readable format (HH:MM:SS)
-
-    HH = hours, padded to 2 digits, range: 00 - 99
-    MM = minutes, padded to 2 digits, range: 00 - 59
-    SS = seconds, padded to 2 digits, range: 00 - 59
-
-The maximum time never exceeds 359999 (99:59:59)
-
-You can find some examples in the test fixtures.
-"""
-
 # Solution 1
-def make_readable(s):
-    reste = s
-    heure = int(reste // (60 * 60))
-    reste = reste % (60 * 60)
-    minute = int(reste // 60)
-    seconde = int(reste % 60)
+def make_readable_1(s: int) -> str:
+    """
+    Converts a non-negative integer (seconds) into a
+    human-readable time format (HH:MM:SS).
 
-    return "%02d:%02d:%02d" % (heure, minute, seconde)
+    - HH: hours (00-99), padded to 2 digits.
+    - MM: minutes (00-59), padded to 2 digits.
+    - SS: seconds (00-59), padded to 2 digits.
+    """
+    remainder = s
+    hour = int(remainder // (60 * 60))
+    remainder = remainder % (60 * 60)
+    minute = int(remainder // 60)
+    second = int(remainder % 60)
+
+    return "%02d:%02d:%02d" % (hour, minute, second)
 
 
 # Solution 2
-def make_readable(s):
+def make_readable_2(s: int) -> str:
+    """
+    Converts a non-negative integer (seconds) into a
+    human-readable time format (HH:MM:SS).
+
+    - HH: hours (00-99), padded to 2 digits.
+    - MM: minutes (00-59), padded to 2 digits.
+    - SS: seconds (00-59), padded to 2 digits.
+    """
     return "{:02}:{:02}:{:02}".format(s // 3600, s // 60 % 60, s % 60)
