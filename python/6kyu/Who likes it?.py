@@ -1,24 +1,11 @@
-"""
-Description
-
-You probably know the "like" system from Facebook and other pages. 
-People can "like" blog posts, pictures or other items. 
-We want to create the text that should be displayed next to such an item.
-
-Implement the function which takes an array containing the names of people that like an item. 
-
-It must return the display text as shown in the examples:
-[]                                -->  "no one likes this"
-["Peter"]                         -->  "Peter likes this"
-["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
-["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
-["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-
-Note: For 4 or more names, the number in "and 2 others" simply increases.
-"""
-
 # Solution 1
-def likes(names):
+def likes_1(names: list) -> str:
+    """
+    Generates a like message based on the number of people who liked an item.
+
+    Given a list of names, returns a formatted string indicating how many
+    people liked the item. The output varies based on the number of names.
+    """
     if len(names) == 0:
         return "no one likes this"
     elif len(names) == 1:
@@ -32,7 +19,13 @@ def likes(names):
 
 
 # Solution 2
-def likes(names):
+def likes_2(names: list) -> str:
+    """
+    Generates a like message based on the number of people who liked an item.
+
+    Given a list of names, returns a formatted string indicating how many
+    people liked the item. The output varies based on the number of names.
+    """
     match names:
         case []:
             return "no one likes this"

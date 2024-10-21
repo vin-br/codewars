@@ -1,24 +1,11 @@
-"""Description:
-
-You live in the city of Cartesia where all roads are laid out in a perfect grid. 
-You arrived ten minutes too early to an appointment, so you decided to take the 
-opportunity to go for a short walk. The city provides its citizens with a Walk 
-Generating App on their phones -- everytime you press the button it sends you an array 
-of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). 
-
-You always walk only a single block for each letter (direction) and you know 
-it takes you one minute to traverse one city block, so create a function 
-that will return true if the walk the app gives you will take you exactly ten minutes 
-(you don't want to be early or late!) and will, of course, return you to your starting point. 
-Return false otherwise.
-
-Note: you will always receive a valid array containing a random assortment of 
-direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array
-(that's not a walk, that's standing still!).
-"""
-
 # Solution 1
-def is_valid_walk(walk):
+def is_valid_walk_1(walk: list) -> bool:
+    """
+    Checks if the given walk takes exactly 10 minutes and returns to
+    the starting point. Each direction is represented by a one-letter
+    string (e.g., 'n', 's', 'e', 'w'). A valid walk must consist of
+    10 steps and equal north-south and east-west movements.
+    """
     return (
         True
         if len(walk) == 10
@@ -29,7 +16,13 @@ def is_valid_walk(walk):
 
 
 # Solution 2
-def is_valid_walk(walk):
+def is_valid_walk_2(walk: list) -> bool:
+    """
+    Checks if the given walk takes exactly 10 minutes and returns to
+    the starting point. Each direction is represented by a one-letter
+    string (e.g., 'n', 's', 'e', 'w'). A valid walk must consist of
+    10 steps and equal north-south and east-west movements.
+    """
     return (
         len(walk) == 10
         and walk.count("n") == walk.count("s")
