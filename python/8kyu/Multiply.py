@@ -1,9 +1,4 @@
-"""
-Description
-
-This code does not execute properly. Try to figure out why.
-"""
-
 # Solution
-def multiply(a, b):
+def multiply(a: int, b: int) -> int:
+    """Multiplies two variables"""
     return a * b

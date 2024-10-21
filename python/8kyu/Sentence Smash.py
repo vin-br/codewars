@@ -1,15 +1,5 @@
-"""
-Description
-
-Write a function that takes an array of words and smashes them together into a sentence
-and returns the sentence. You can ignore any need to sanitize words or add punctuation,
-but you should add spaces between each word. Be careful, there shouldn't be a space at
-the beginning or the end of the sentence!
-
-Example
-['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
-"""
-
 # Solution
-def smash(words):
+def smash(words: list) -> str:
+    """Combine an array of words into a single sentence
+    with spaces between them. No leading or trailing spaces."""
     return " ".join(words)

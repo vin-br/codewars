@@ -1,13 +1,10 @@
-"""
-Description
-
-Complete the method that takes a boolean value 
-and return a "Yes" string for true, or a "No" string for false.
-"""
-
 # Solution
-def bool_to_word(boolean):
-    if boolean == True:
+def bool_to_word(boolean: bool) -> str:
+    """
+    Convert a boolean value to a string.
+    Returns "Yes" for True and "No" for False.
+    """
+    if boolean is True:
         return "Yes"
     else:
         return "No"

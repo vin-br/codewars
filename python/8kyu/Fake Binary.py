@@ -1,14 +1,9 @@
-"""
-Description
-
-Given a string of digits, you should replace any digit below 5 with '0'
-and any digit 5 and above with '1'. Return the resulting string.
-
-Note: input will never be an empty string
-"""
-
 # Solution 1
-def fake_bin(x):
+def fake_bin_1(x: str) -> str:
+    """
+    Replace digits in a string: '0' for digits < 5,
+    '1' for digits >= 5. The input string is never empty.
+    """
     return (
         x.replace("1", "0")
         .replace("2", "0")
@@ -23,5 +18,9 @@ def fake_bin(x):
 
 
 # Solution 2
-def fake_bin(s):
+def fake_bin_2(s: str) -> str:
+    """
+    Replace digits in a string: '0' for digits < 5,
+    '1' for digits >= 5. The input string is never empty.
+    """
     return s.translate(s.maketrans("0123456789", "0000011111"))

@@ -1,9 +1,4 @@
-"""
-Description
-
-Code as fast as you can! You need to double the integer and return it.
-"""
-
 # Solution
-def double_integer(i):
+def double_integer(i: int) -> int:
+    """Doubles the number passed as input."""
     return i * 2

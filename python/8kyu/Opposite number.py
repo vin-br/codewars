@@ -1,14 +1,4 @@
-"""
-Description
-
-Very simple, given an integer or a floating-point number, find its opposite.
-
-Examples:
-1: -1
-14: -14
--34: 34
-"""
-
 # Solution
-def opposite(number):
+def opposite(number: int) -> int:
+    """Given a number, return its opposite."""
     return number * -1

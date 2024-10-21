@@ -1,9 +1,4 @@
-"""
-Description
-
-Write a function which converts the input string to uppercase.
-"""
-
 # Solution
-def make_upper_case(s):
+def make_upper_case(s: str) -> str:
+    """Converts the input string to uppercase."""
     return s.upper()
