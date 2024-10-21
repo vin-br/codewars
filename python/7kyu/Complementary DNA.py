@@ -1,29 +1,22 @@
-"""
-Description
-
-Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells 
-and carries the "instructions" for the development and functioning of living organisms.
-
-If you want to know more: http://en.wikipedia.org/wiki/DNA
-
-In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". 
-Your function receives one side of the DNA (string, except for Haskell); 
-you need to return the other complementary side. 
-DNA strand is never empty or there is no DNA at all (again, except for Haskell).
-
-More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
-
-Example: (input --> output)
-"ATTGC" --> "TAACG"
-"GTAT" --> "CATA"
-
-"""
-
 # Solution 1
-def DNA_strand(dna):
-    return dna.replace("A", "t").replace("T", "A").replace("C", "g").replace("G", "C").upper()
+def DNA_strand_1(dna: str) -> str:
+    """
+    Given a DNA strand as a string, return its complementary strand.
+    In a DNA sequence, "A" pairs with "T" and "C" pairs with "G".
+    """
+    return (
+        dna.replace("A", "t")
+        .replace("T", "A")
+        .replace("C", "g")
+        .replace("G", "C")
+        .upper()
+    )
 
 
 # Solution 2
-def DNA_strand(dna):
+def DNA_strand_2(dna: str) -> str:
+    """
+    Given a DNA strand as a string, return its complementary strand.
+    In a DNA sequence, "A" pairs with "T" and "C" pairs with "G".
+    """
     return dna.translate(dna.maketrans("ATCG", "TAGC"))

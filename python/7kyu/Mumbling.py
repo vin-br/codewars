@@ -1,16 +1,8 @@
-"""
-Description
-
-This time no story, no theory. The examples below show you how to write function accum:
-Examples:
-
-accum("abcd") -> "A-Bb-Ccc-Dddd"
-accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-accum("cwAt") -> "C-Ww-Aaa-Tttt"
-
-The parameter of accum is a string which includes only letters from a..z and A..Z.
-"""
-
 # Solution
-def accum(text):
+def accum(text: str) -> str:
+    """
+    Generates a string where each letter in the input string is repeated
+    according to its position and formatted with uppercase for the first
+    occurrence and lowercase for the others, separated by dashes.
+    """
     return "-".join([text[l].upper() + (text[l].lower() * l) for l in range(len(text))])
