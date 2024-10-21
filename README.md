@@ -1,12 +1,12 @@
 # Codewars
 
-Dépôt de Vincent Boettcher
+Languages:
+- Python
+- C#
+- SQL
 
-Niveau : 5kyu
+Best Level: 4kyu in Python
 
-Langage : Python
+Codewars profile: https://www.codewars.com/users/vin-br
 
-
-Lien vers mon profil Codewars : https://www.codewars.com/users/vin-br
-
-Lien vers mon profil LinkedIn : https://www.linkedin.com/in/vincentboettcher/
+LinkedIn profile: https://www.linkedin.com/in/vin-br/
